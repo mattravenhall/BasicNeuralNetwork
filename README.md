@@ -2,7 +2,7 @@
 Just messing around with neural network fundamentals
 
 ## Running basicNN
-- Basic neural networks of specific sizes (two or three layer), mainly learn how to build one.
+- Basic neural networks of specific sizes (two or three layer), mainly for learning how to build one.
 
 ```python
 >>> import basicNN as bNN
@@ -13,7 +13,7 @@ Just messing around with neural network fundamentals
 ```
 
 ## Running NeuralNetwork
-- Combined and extended version of basicNN, allowing for creating neural networks of any specific size.
+- Combined and extended version of basicNN, allowing for the creation of any specific size of basic neural network.
 
 ```python
 >>> import NeuralNetwork as NN

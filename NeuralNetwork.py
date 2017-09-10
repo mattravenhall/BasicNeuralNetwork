@@ -2,8 +2,6 @@ import numpy as np
 
 class NeuralNetwork:
     def __init__(self, eons=10000, size=[3,1], seed=2017, verbose=False,
-#                trainingInputs=np.array([[0, 0, 1], [0, 1, 1], [1, 0, 1], [0, 1, 0], [1, 0, 0], [1, 1, 1], [0, 0, 0]]),
-#                trainingOutput=np.array([[0, 1, 1, 1, 1, 0, 0]]).T):
                 trainingInputs = np.array([[0,0,1],[0,1,1],[1,0,1],[1,1,1]]),
                 trainingOutput = np.array([[0,0,1,1]]).T):
 
@@ -50,19 +48,19 @@ class NeuralNetwork:
                     errors.append(np.dot(weight_adjs[-1], weights[-i].T))
                     weight_adjs.append(errors[-1] * self._sigDeriv(states[i]))
 
-            #print('Weights:', weights) if self.verbose else None
-            #print('States:', states) if self.verbose else None
+            print('Weights:', weights) if self.verbose else None
+            print('States:', states) if self.verbose else None
 
             errors      = errors[::-1]
             weight_adjs = weight_adjs[::-1]
 
-            #print('Errors:', errors) if self.verbose else None
-            #print('Weights Adj:', weight_adjs) if self.verbose else None
+            print('Errors:', errors) if self.verbose else None
+            print('Weights Adj:', weight_adjs) if self.verbose else None
 
             # Apply weight adjustments
             for i in range(self.layers-1):
                 weights[i] += np.dot(states[i].T, weight_adjs[i])
-            #print('Adjusted Weights:', weights) if self.verbose else None
+            print('Adjusted Weights:', weights) if self.verbose else None
         self.trainedWeights = weights
         return(weights)
 

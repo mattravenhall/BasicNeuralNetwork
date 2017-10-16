@@ -1,5 +1,5 @@
 # BasicNeuralNetwork
-Just messing around with neural network fundamentals
+Just messing around with neural network fundamentals. Discussion of this project can be found at https://mattravenhall.github.io/2017/09/12/Basic-Neural-Networks.html.
 
 ## Running basicNN
 - Basic neural networks of specific sizes (two or three layer), mainly for learning how to build one.
